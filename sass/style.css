@@ -42,6 +42,40 @@
   transition: all 1.5s;
 }
 
+#top-section button {
+  border: none;
+  outline: none;
+  border: 1px solid white;
+  background: transparent;
+  padding: 12px 12px;
+  color: white;
+  margin-left: 130px;
+  margin-top: 50px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  font-size: 1em;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#top-section button .fas {
+  color: white;
+  margin-left: 10px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#top-section button:hover {
+  background: white;
+  border-color: white;
+  color: black;
+}
+
+#top-section button:hover .fas {
+  color: black;
+  margin-left: 18px;
+}
+
 #top-section h1 {
   text-transform: uppercase;
   font-size: 3em;
@@ -163,6 +197,9 @@
   height: 300px;
   -webkit-box-shadow: 0px 0px 10px grey;
           box-shadow: 0px 0px 10px grey;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  cursor: pointer;
 }
 
 #services-section #services-main .services-box h4 {
@@ -170,6 +207,11 @@
   background: white;
   padding: 10px;
   font-weight: lighter;
+}
+
+#services-section #services-main .services-box:hover {
+  -webkit-filter: grayscale(2);
+          filter: grayscale(2);
 }
 
 #services-section #services-main #services-box_1 {
