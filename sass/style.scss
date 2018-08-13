@@ -1,0 +1,209 @@
+// font-family: 'Poppins', sans-serif;
+
+@mixin backImgCover{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+* {
+    margin: 0;
+}
+
+#grid-container{
+    display: grid;
+    grid-template-areas: 'top-section'
+    'services-section'
+    ;
+    grid-template-columns: 1fr;
+    font-family: 'Poppins', sans-serif;
+}
+
+.margin-wrapper{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#top-section{
+    grid-area: top-section;
+    height: 100vh;
+    background: url('https://images.pexels.com/photos/625414/pexels-photo-625414.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    @include backImgCover;
+    background-attachment: fixed;
+    position: relative;
+
+    #name-header{
+        position: absolute;
+        left: 75%;
+        top: -250px;
+        transform: translate(-50%,-50%);
+        opacity: 0;
+        padding: 25px;
+        border-radius: 2px;
+        transition: all 1.5s;
+    }
+
+    h1{
+        text-transform: uppercase;
+        font-size: 3em;
+        color: #fff7e8;
+    }
+
+    p{
+        margin-top: 20px;
+        color: #fff7e8;
+        text-align: center;
+        font-family: 'Pacifico', cursive;
+        font-size: 1.2em;
+        font-weight: lighter;
+    }
+
+    #div-divider{
+        height: 3px;
+        min-width: 0px;
+        margin: 10px 60px;
+        background-color: #fff7e8;
+        color: #fff7e8;
+    }
+
+    #navbar{
+        position: fixed;
+        z-index: 10000;
+        width: 100%;
+        top: 0;
+        background: rgba(255, 255, 255, 0.85);
+        height: 60px;
+        transition: all 0.5s;
+
+        .fas, .fab{
+            margin-left: 10px;
+        }
+
+        #nav-name{
+            font-size: 1.4em;
+            float: left;
+            margin-top: 10px;
+            letter-spacing: 2px;
+            a{
+                color: rgb(39, 37, 37);
+            }
+        }
+        #nav-links{
+            margin-top: 15px;
+            float: right;
+            font-size: 1.1em;
+        }
+
+        a{
+            text-decoration: none;
+            color: #919191;
+            margin-right: 30px;
+            transition: all 0.3s;
+
+            &:hover{
+                color: #212121;
+            }
+        }
+    }
+
+}
+
+#services-section{
+    grid-area: services-section;
+    height: 800px;
+    margin-top: 100px;
+
+    #services-header{
+        h2,p {
+            text-align: center;
+            color: #212121;
+            font-weight: lighter;
+            font-size: 1.6em;
+        }
+
+        .hideMe{
+            color: transparent;
+            text-decoration: line-through;
+            text-decoration-color: #212121;
+            text-decoration-style: dotted;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        p{
+            font-size: 1em;
+            margin-top: 10px;
+        }
+    }
+
+    #services-footer{
+        h2{
+            margin-top: 20px;
+            text-align: center;
+            color: #212121;
+            font-weight: lighter;
+            font-size: 1em;
+        }
+    }
+
+    #services-main{
+        margin-top: 50px;
+        display: grid;
+        grid-template-areas: 'services-box_1 services-box_2 services-box_3'
+        'services-box_4 services-box_5 services-box_6'
+        ;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+
+        .services-box{
+            border-radius: 2px;
+            height: 300px;
+            box-shadow: 0px 0px 10px grey;
+
+            h4{
+                color: #4e4e4e;
+                background: white;
+                padding: 10px;
+                font-weight: lighter;
+            }
+        }
+
+        #services-box_1{
+            grid-area: services-box_1;
+            background: url('https://images.pexels.com/photos/794254/pexels-photo-794254.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+            @include backImgCover;
+            height: 350px;
+        }
+        #services-box_2{
+            grid-area: services-box_2;
+            background: url('https://images.unsplash.com/photo-1469198461748-5d21da152cf7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8a9f8610bdc20d4de3f88f50093fd4af&auto=format&fit=crop&w=750&q=80');
+            @include backImgCover;
+            height: 250px;
+        }
+        #services-box_3{
+            grid-area: services-box_3;
+            background: url('https://images.pexels.com/photos/254069/pexels-photo-254069.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+            @include backImgCover;
+            height: 350px;
+        }
+        #services-box_4{
+            grid-area: services-box_4;
+            background: url('https://images.unsplash.com/photo-1511348398635-8efff213a280?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9d37af4b841cc1774ba1fdd1d80c55bb&auto=format&fit=crop&w=750&q=80');
+            @include backImgCover;
+            height: 250px;
+        }
+        #services-box_5{
+            grid-area: services-box_5;
+            background: url('https://images.unsplash.com/photo-1494859632785-32abaf5241f4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d14df830124639bc917a8d2c691daeaa&auto=format&fit=crop&w=778&q=80');
+            @include backImgCover;
+            height: 350px;
+            margin-top: -100px;
+        }
+        #services-box_6{
+            grid-area: services-box_6;
+            background: url('https://images.unsplash.com/photo-1524630573288-981eb81238f0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=884306b6f75726081ba6e7dc84e8cde8&auto=format&fit=crop&w=750&q=80');
+            @include backImgCover;
+            height: 250px;
+        }
+    }
+}
